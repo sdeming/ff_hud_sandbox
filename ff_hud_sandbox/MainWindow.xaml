@@ -1,0 +1,26 @@
+﻿<Window x:Class="ff_hud_sandbox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="404" Width="542" 
+        Unloaded="Window_Unloaded"
+        Loaded="Window_Loaded" SourceInitialized="Window_SourceInitialized" Closed="Window_Closed">
+  <Grid>
+    <Grid.ColumnDefinitions>
+    </Grid.ColumnDefinitions>
+    <Button Content="Exit" Height="26" HorizontalAlignment="Left" Margin="12,12,0,0" Name="exitButton" VerticalAlignment="Top" Width="64" Click="exitButton_Click" />
+    <Button Content="Toggle Backdrop" Margin="83,12,12,0" Name="backdropButton" Click="backdropButton_Click" Height="26" VerticalAlignment="Top" />
+    <Button Content="Toggle Thumbnails" Margin="83,44,12,0" Name="thumbnailsButton" Click="thumbnailsButton_Click" Height="26" VerticalAlignment="Top" />
+    <Button Content="Toggle Desktop" Margin="83,76,12,0" Name="desktopButton" Click="desktopButton_Click" Height="26" VerticalAlignment="Top" />
+    <Button Content="Offscreen" Margin="0,108,79,0" Name="moveOffscreenButton" Click="moveOffscreenButton_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Right" Width="64" />
+    <Button Content="Onscreen" Margin="0,108,12,0" Name="moveOnscreenButton" Click="moveOnscreenButton_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Right" Width="64" />
+    <Button Content="Place" Height="31" HorizontalAlignment="Left" Margin="83,108,0,0" Name="showPlacementsButton" VerticalAlignment="Top" Width="64" Click="showPlacementsButton_Click" />
+        <Grid Margin="12,145,12,12" Name="grid1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="244*" />
+                <ColumnDefinition Width="235*" />
+            </Grid.ColumnDefinitions>
+            <ListBox Name="fsMessages" />
+            <ListBox Name="shellMessages" Grid.Column="1" />
+        </Grid>
+    </Grid>
+</Window>

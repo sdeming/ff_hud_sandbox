@@ -1,0 +1,8 @@
+package.bat
+pkg
+**/*.csproj.user
+*.suo
+**/*.suo
+*/bin
+*/obj
+

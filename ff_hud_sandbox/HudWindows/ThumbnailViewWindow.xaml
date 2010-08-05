@@ -1,0 +1,8 @@
+﻿<Window x:Class="ff_hud_sandbox.HudWindows.ThumbnailViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="200" Width="300" 
+        Topmost="True"
+        Unloaded="Window_Unloaded" 
+        Loaded="Window_Loaded" 
+        SizeChanged="Window_SizeChanged" Background="Transparent"></Window>

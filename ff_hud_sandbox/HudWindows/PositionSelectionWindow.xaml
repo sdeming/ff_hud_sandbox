@@ -1,0 +1,9 @@
+﻿<Window x:Class="ff_hud_sandbox.HudWindows.PositionSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PositionSelectionWindow" Height="320" Width="400">
+    <Grid>
+        <DataGrid Name="selectionGrid" Width="378" Height="281" ItemsSource="{Binding}" HeadersVisibility="None" RowHeight="48" SelectionUnit="Cell" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalScrollBarVisibility="Hidden" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False">
+        </DataGrid>
+    </Grid>
+</Window>
