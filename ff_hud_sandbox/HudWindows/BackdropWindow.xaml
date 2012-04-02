@@ -6,6 +6,6 @@
         WindowStyle="None"
         Background="Black"
         ShowInTaskbar="False" 
-        Opacity="0.1"
+        Opacity="0.0"
         Loaded="Window_Loaded" Unloaded="Window_Unloaded">   
 </Window>

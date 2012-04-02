@@ -25,30 +25,31 @@ namespace ff_hud_sandbox.HudWindows
     public BackdropWindow()
     {
       InitializeComponent();
+      ShowInTaskbar = false;
     }
 
     public void Toggle()
     {
       if (Opacity > 0.0)
       {
-        FadeOut();
+        FadeOut(0.1);
       }
       else
       {
-        FadeIn();
+        FadeIn(0.1, 0.9);
       }
     }
 
-    private void FadeIn()
+    private void FadeIn(double duration, double opacity)
     {
       SizeToFit();
-      Topmost = true;            
-      BeginAnimation(Window.OpacityProperty, new DoubleAnimation(0.5, new Duration(TimeSpan.FromSeconds(0.2))));      
+      Topmost = true;
+      BeginAnimation(Window.OpacityProperty, new DoubleAnimation(opacity, new Duration(TimeSpan.FromSeconds(duration))));      
     }
 
-    private void FadeOut()
+    private void FadeOut(double duration)
     {
-      BeginAnimation(Window.OpacityProperty, new DoubleAnimation(0.0, new Duration(TimeSpan.FromSeconds(0.2))));
+      BeginAnimation(Window.OpacityProperty, new DoubleAnimation(0.0, new Duration(TimeSpan.FromSeconds(duration))));
     }
 
     private void SizeToFit()
@@ -62,8 +63,8 @@ namespace ff_hud_sandbox.HudWindows
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
       //DesktopThumbnail = new Thumbnail(new CoreWindow(User32.GetShellWindow()));
-      //DesktopThumbnail.Register(new CoreWindow(this));
-      FadeIn();
+      //DesktopThumbnail.Register(new CoreWindow(this));      
+      FadeIn(0.1, 0.9);
     }
 
     private void Window_Unloaded(object sender, RoutedEventArgs e)

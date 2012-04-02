@@ -30,11 +30,13 @@ namespace ff_hud_sandbox
     public MainWindow()
     {
       InitializeComponent();
+      
       Thumbnails = new List<HudWindows.ThumbnailViewWindow>();
       Backdrops = new List<HudWindows.BackdropWindow>();
       Backdrops.Add(new HudWindows.BackdropWindow());
-      //Backdrops.ForEach((b) => b.Show());
-      Topmost = true;
+      Backdrops.ForEach((b) => b.Show());
+
+      Topmost = true;      
 
       fsMessages.Items.Add(String.Format("Watching: {0}\n", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)));
       fsMessages.SelectedIndex = 0;
