@@ -10,7 +10,6 @@
     <Button Content="Exit" Height="26" HorizontalAlignment="Left" Margin="12,12,0,0" Name="exitButton" VerticalAlignment="Top" Width="64" Click="exitButton_Click" />
     <Button Content="Toggle Backdrop" Margin="83,12,12,0" Name="backdropButton" Click="backdropButton_Click" Height="26" VerticalAlignment="Top" />
     <Button Content="Toggle Thumbnails" Margin="83,44,12,0" Name="thumbnailsButton" Click="thumbnailsButton_Click" Height="26" VerticalAlignment="Top" />
-    <Button Content="Toggle Desktop" Margin="83,76,12,0" Name="desktopButton" Click="desktopButton_Click" Height="26" VerticalAlignment="Top" />
     <Button Content="Offscreen" Margin="0,108,79,0" Name="moveOffscreenButton" Click="moveOffscreenButton_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Right" Width="64" />
     <Button Content="Onscreen" Margin="0,108,12,0" Name="moveOnscreenButton" Click="moveOnscreenButton_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Right" Width="64" />
     <Button Content="Place" Height="31" HorizontalAlignment="Left" Margin="83,108,0,0" Name="showPlacementsButton" VerticalAlignment="Top" Width="64" Click="showPlacementsButton_Click" />

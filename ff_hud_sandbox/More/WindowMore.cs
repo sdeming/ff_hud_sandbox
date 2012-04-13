@@ -7,7 +7,7 @@ using More.Types;
 
 namespace More
 {  
-  public class WinodwMore : System.Windows.Interop.IWin32Window
+  public class WindowMore : System.Windows.Interop.IWin32Window
   {
     private Stack<WindowMoreState> states_stack_;
     public IntPtr Handle { get; private set; }
@@ -55,13 +55,24 @@ namespace More
       }
     }
 
-    public WinodwMore(IntPtr handle)
+    public String Title
+    {
+      get
+      {
+        var data = new StringBuilder(256);
+        User32.GetWindowText(Handle, data, data.Capacity);
+        return data.ToString();
+      }
+    }
+
+
+    public WindowMore(IntPtr handle)
     {
       states_stack_ = new Stack<WindowMoreState>();
       Handle = handle;
     }
 
-    public WinodwMore(System.Windows.Window window)
+    public WindowMore(System.Windows.Window window)
     {
       states_stack_ = new Stack<WindowMoreState>();
       Handle = new System.Windows.Interop.WindowInteropHelper(window).Handle;

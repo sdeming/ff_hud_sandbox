@@ -52,7 +52,7 @@ namespace ff_hud_sandbox
 
     private void Window_SourceInitialized(object sender, EventArgs e)
     {
-      var handle = new More.WinodwMore(this).Handle;
+      var handle = new More.WindowMore(this).Handle;
       var src = HwndSource.FromHwnd(handle);
       src.AddHook(new HwndSourceHook(WndProc));
 
@@ -62,7 +62,7 @@ namespace ff_hud_sandbox
 
     private void Window_Closed(object sender, EventArgs e)
     {
-      var handle = new More.WinodwMore(this).Handle;
+      var handle = new More.WindowMore(this).Handle;
       var src = HwndSource.FromHwnd(handle);
       src.RemoveHook(new HwndSourceHook(this.WndProc));
 
@@ -151,14 +151,6 @@ namespace ff_hud_sandbox
       if (Thumbnails.Count == 0) return;
       Thumbnails.ForEach((t) => t.RestoreSource());
       Thumbnails.Reverse();
-    }
-
-    private void desktopButton_Click(object sender, RoutedEventArgs e)
-    {
-      var desktop = User32.GetShellWindow();
-      var big_desktop = new HudWindows.BigGiantDesktopWindow();
-      big_desktop.Topmost = true;
-      big_desktop.Show();      
     }
 
     private void showPlacementsButton_Click(object sender, RoutedEventArgs e)

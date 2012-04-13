@@ -10,8 +10,8 @@ namespace More
   public class Thumbnail
   {
     private IntPtr thumb_ptr_;
-    public WinodwMore SourceWindow { get; private set; }
-    public WinodwMore TargetWindow { get; private set; }
+    public WindowMore SourceWindow { get; private set; }
+    public WindowMore TargetWindow { get; private set; }
 
     public PSIZE SourceSize
     {
@@ -25,7 +25,7 @@ namespace More
       }
     }
 
-    public Thumbnail(WinodwMore source)
+    public Thumbnail(WindowMore source)
     {
       SourceWindow = source;
     }
@@ -38,7 +38,7 @@ namespace More
       thumb_ptr_ = IntPtr.Zero;
     }
 
-    public void Register(WinodwMore target)
+    public void Register(WindowMore target)
     {
       Unregister();
       TargetWindow = target;

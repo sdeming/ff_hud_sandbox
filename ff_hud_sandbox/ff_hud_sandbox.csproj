@@ -59,10 +59,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HudWindows\BigGiantDesktopWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="HudWindows\PositionSelectionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -78,9 +74,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="HudWindows\BigGiantDesktopWindow.xaml.cs">
-      <DependentUpon>BigGiantDesktopWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="HudWindows\PositionSelectionWindow.xaml.cs">
       <DependentUpon>PositionSelectionWindow.xaml</DependentUpon>
